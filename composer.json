@@ -1,0 +1,43 @@
+{
+  "name": "soledis/sldskeleton",
+  "description": "DESCRIPTION",
+  "license": "proprietary",
+  "version": "1.0.5",
+  "authors": [
+    {
+      "name": "Soledis",
+      "email": "prestashop@groupe-soledis.com",
+      "homepage": "https://www.groupe-soledis.com/",
+      "role": "Agency"
+    },
+    {
+      "name": "DEV_PRENOM NOM_DEV",
+      "email": "dev_prenom.nom_dev@groupe-soledis.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Soledis\\SldSkeleton\\": [
+        "src/",
+        "vendor/soledis/sldskeletonbase/src"
+      ]
+    },
+    "classmap": [
+      "sldskeleton.php"
+    ]
+  },
+  "scripts": {
+    "init-module": ["Soledis\\SldSkeleton\\Init\\InitCommand"],
+    "post-install-cmd": [
+      "@init-module"
+    ]
+  },
+  "config": {
+    "prepend-autoloader": false
+  },
+  "type": "prestashop-module",
+  "require": {
+    "soledis/sldskeletonbase": "dev-main"
+  }
+}
