@@ -29,7 +29,7 @@
   },
   "scripts": {
     "init-module": ["Soledis\\SldSkeleton\\Init\\InitCommand"],
-    "post-install-cmd": [
+    "post-create-project-cmd": [
       "@init-module"
     ]
   },
